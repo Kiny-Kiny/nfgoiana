@@ -2,7 +2,8 @@ from requests import session
 
 url = "https://nfgoiana.economia.go.gov.br/nfg/cidadao/"
 
-def getToken(s, cookie):                                          header = {"Host": "nfgoiana.economia.go.gov.br", "Connection": "keep-alive", "Cache-Control": "max-age=0", "sec-ch-ua": '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"', "sec-ch-ua-mobile": "?1", "sec-ch-ua-platform": '"Android"', "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Linux; Android 10; M2010J19SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.50 Mobile Safari/537.36", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "none", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Sec-Fetch-Dest": "document", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7", "Cookie": cookie}
+def getToken(s, cookie):
+  header = {"Host": "nfgoiana.economia.go.gov.br", "Connection": "keep-alive", "Cache-Control": "max-age=0", "sec-ch-ua": '"Google Chrome";v="95", "Chromium";v="95", ";Not A Brand";v="99"', "sec-ch-ua-mobile": "?1", "sec-ch-ua-platform": '"Android"', "Upgrade-Insecure-Requests": "1", "User-Agent": "Mozilla/5.0 (Linux; Android 10; M2010J19SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.50 Mobile Safari/537.36", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "none", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Sec-Fetch-Dest": "document", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7", "Cookie": cookie}
 
   response = s.get(url + "cadastrar", headers = header)
 
